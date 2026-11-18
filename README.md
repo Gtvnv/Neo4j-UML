@@ -1,12 +1,51 @@
+<div align="center">
+
 # Diagrama de Classes UML em Grafo com Neo4j
 
+**Um diagrama de classes de e-commerce modelado como grafo, com consultas Cypher para herança, impacto, ciclos e acoplamento.**
+
+![Neo4j 5.x](https://img.shields.io/badge/Neo4j-5.x-008CC1?logo=neo4j&logoColor=white)
+![Cypher](https://img.shields.io/badge/Cypher-consultas-4581C3)
+![sem APOC](https://img.shields.io/badge/APOC-n%C3%A3o%20necess%C3%A1rio-lightgrey)
+![Docker](https://img.shields.io/badge/Docker-pronto-2496ED?logo=docker&logoColor=white)
+![pytest e Hypothesis](https://img.shields.io/badge/testes-pytest%20%2B%20Hypothesis-0A9EDC?logo=pytest&logoColor=white)
+![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-green)
+
+</div>
+
 Portfólio que modela um diagrama de classes UML de um sistema de e-commerce como um banco de dados em grafo no Neo4j 5.x, sem o plugin APOC. O repositório traz o dataset em CSV, os scripts Cypher de carga e consulta e as evidências visuais dos resultados.
+
+![Esquema do banco no Neo4j](docs/images/schema-db.png)
+
+## Sumário
+
+- [Destaques](#destaques)
+- [Estrutura de pastas](#estrutura-de-pastas)
+- [Contexto](#contexto)
+- [Justificativa: grafo versus relacional](#justificativa-grafo-versus-relacional)
+- [Modelo do grafo](#modelo-do-grafo)
+- [Domínio de exemplo](#domínio-de-exemplo)
+- [Como executar](#como-executar)
+- [Perguntas de negócio e resultados esperados](#perguntas-de-negócio-e-resultados-esperados)
+- [Resultados](#resultados)
+- [Troubleshooting](#troubleshooting)
+- [Validação](#validação)
+
+## Destaques
+
+- 16 classificadores em 4 pacotes, carregados de 5 arquivos CSV com `LOAD CSV`.
+- 8 perguntas de negócio em Cypher: ancestrais, implementações, impacto, ciclos, violação de camadas, acoplamento, cadeia de chamadas e estrutura de pacote.
+- Cypher nativo, sem APOC. Um bloco `LOAD CSV` por tipo de relacionamento.
+- Carga idempotente com `MERGE` e constraints de unicidade, com script de reset.
+- Script de validação (`04_validate.cypher`) que confere as contagens esperadas.
+- Testes automatizados em Python (pytest e Hypothesis) que protegem o dataset, a carga e este README.
 
 ## Estrutura de pastas
 
 - `data/`: arquivos CSV do dataset que descrevem o diagrama de classes (classificadores, relacionamentos, atributos, métodos e chamadas). É a fonte lida pelo `LOAD CSV`.
 - `cypher/`: scripts Cypher numerados na ordem de execução (`NN_descricao.cypher`), cobrindo constraints, carga, validação, consultas de negócio e reset.
 - `docs/images/`: imagens do esquema do grafo e capturas de tela dos resultados das consultas.
+- `docs/modelo-grafo.md`: descrição completa do esquema do grafo.
 
 ## Contexto
 
@@ -52,14 +91,34 @@ JOIN classifiers c ON c.id = a.id
 ORDER BY c.name;
 ```
 
+## Modelo do grafo
+
+Visão resumida do esquema. A descrição completa (propriedades, tipos de dado e mapeamento UML) está em [docs/modelo-grafo.md](docs/modelo-grafo.md).
+
+```mermaid
+graph LR
+    Package -->|CONTAINS| Classifier
+    Classifier -->|HAS_ATTRIBUTE| Attribute
+    Classifier -->|HAS_METHOD| Method
+    Classifier -->|EXTENDS| Classifier
+    Classifier -->|IMPLEMENTS| Classifier
+    Classifier -->|DEPENDS_ON| Classifier
+    Classifier -->|"ASSOCIATES (role, multiplicity)"| Classifier
+    Classifier -->|"COMPOSED_OF (role, multiplicity)"| Classifier
+    Classifier -->|"AGGREGATES (role, multiplicity)"| Classifier
+    Method -->|"CALLS (sequence)"| Method
+```
+
 ## Domínio de exemplo
 
 O domínio é um sistema de e-commerce com 16 classificadores, organizados em quatro pacotes:
 
-- `domain`: entidades e tipos do negócio, como clientes, pedidos, itens, produtos e pagamentos. Concentra as regras centrais e deveria ser o pacote mais independente.
-- `service`: serviços de aplicação que orquestram os casos de uso, como pedidos, pagamentos e notificações, e a interface do gateway de pagamento.
-- `repository`: interfaces de acesso a dados que abstraem a persistência de pedidos e clientes.
-- `infra`: implementações concretas de infraestrutura, como o gateway de pagamento, o repositório de pedidos e o envio de e-mail.
+| Pacote | Papel |
+|---|---|
+| `domain` | Entidades e tipos do negócio, como clientes, pedidos, itens, produtos e pagamentos. Concentra as regras centrais e deveria ser o pacote mais independente. |
+| `service` | Serviços de aplicação que orquestram os casos de uso, como pedidos, pagamentos e notificações, e a interface do gateway de pagamento. |
+| `repository` | Interfaces de acesso a dados que abstraem a persistência de pedidos e clientes. |
+| `infra` | Implementações concretas de infraestrutura, como o gateway de pagamento, o repositório de pedidos e o envio de e-mail. |
 
 ## Como executar
 
@@ -135,11 +194,9 @@ Se o `02_load` falhar por não encontrar os arquivos CSV, confira se os cinco ar
 
 ## Perguntas de negócio e resultados esperados
 
-As consultas ficam em `cypher/03_queries.cypher` e usam estes parâmetros padrão: `nome = CreditCardPayment`, `interface = PaymentGateway`, `metodo = OrderService.placeOrder` e `pacote = domain`. Os resultados esperados abaixo foram calculados com os oráculos de `tests/helpers/oracles.py` sobre os CSVs reais, com esses valores.
+As consultas ficam em `cypher/03_queries.cypher` e usam estes parâmetros padrão: `nome = CreditCardPayment`, `interface = PaymentGateway`, `metodo = OrderService.placeOrder` e `pacote = domain`. Os resultados esperados abaixo foram calculados com os oráculos de `tests/helpers/oracles.py` sobre os CSVs reais, com esses valores. As capturas correspondentes estão na seção [Resultados](#resultados).
 
-> **Pendente:** os resultados esperados e as evidências visuais aguardam a confirmação do Autor na validação em uma instância Neo4j real (tarefa 9.1). Os arquivos de imagem listados na última coluna são nomes planejados e ainda não existem em `docs/images/`.
-
-| Pergunta de negócio | Consulta | Resultado esperado | Evidência visual (planejada) |
+| Pergunta de negócio | Consulta | Resultado esperado | Evidência visual |
 |---|---|---|---|
 | Q01. Quais são todos os ancestrais de um classificador? | Q01 em `03_queries.cypher` | 1 linha: `Payment` | `q01-hierarquia-heranca.png` |
 | Q02. Quais classes concretas implementam uma interface, direta ou por herança? | Q02 | 1 linha: `StripeGateway` | `q02-implementacoes-interface.png` |
@@ -150,9 +207,67 @@ As consultas ficam em `cypher/03_queries.cypher` e usam estes parâmetros padrã
 | Q07. Quais métodos são disparados a partir de um método? | Q07 | 8 linhas: `JpaOrderRepository.save`, `NotificationService.sendReceipt`, `Order.calculateTotal`, `OrderItem.subtotal`, `OrderRepository.save`, `PaymentService.charge`, `SmtpEmailSender.send`, `StripeGateway.authorize` | `q07-cadeia-chamadas.png` |
 | Q08. Qual é a estrutura de um pacote? | Q08 | Subgrafo do pacote `domain`: 7 classificadores, 13 atributos e 7 métodos (17 linhas de resultado, pela combinação de atributos e métodos de cada classificador) | `q08-estrutura-pacote.png` |
 
+## Resultados
+
+Capturas reais obtidas no Neo4j Browser, executando os scripts deste repositório.
+
+### Esquema do banco
+
+![Esquema do banco no Neo4j](docs/images/schema-db.png)
+
+*Esquema do grafo carregado: labels e tipos de relacionamento.*
+
+### Q01. Hierarquia de herança
+
+![Q01: ancestrais de um classificador](docs/images/q01-hierarquia-heranca.png)
+
+*Ancestrais de `CreditCardPayment` pela cadeia `EXTENDS`.*
+
+### Q02. Implementações de interface
+
+![Q02: implementações de uma interface](docs/images/q02-implementacoes-interface.png)
+
+*Classes concretas que implementam `PaymentGateway`.*
+
+### Q03. Análise de impacto
+
+![Q03: análise de impacto](docs/images/q03-analise-impacto.png)
+
+*Impacto transitivo de uma mudança. O resultado esperado é vazio.*
+
+### Q04. Ciclos de dependência
+
+![Q04: ciclos de dependência](docs/images/q04-ciclos-dependencia.png)
+
+*Ciclo entre `NotificationService`, `OrderService` e `PaymentService`.*
+
+### Q05. Violação de camadas
+
+![Q05: violação de camadas](docs/images/q05-violacao-camadas.png)
+
+*Dependência de `Payment` (domain) para `StripeGateway` (infra).*
+
+### Q06. Acoplamento
+
+![Q06: classificadores mais acoplados](docs/images/q06-acoplamento.png)
+
+*Ranking por acoplamento total. A captura mostra 11 das 16 linhas; o rodapé do Neo4j Browser indica 16 registros.*
+
+### Q07. Cadeia de chamadas
+
+![Q07: cadeia de chamadas](docs/images/q07-cadeia-chamadas.png)
+
+*Métodos disparados a partir de `OrderService.placeOrder`.*
+
+### Q08. Estrutura de um pacote
+
+![Q08: estrutura do pacote domain](docs/images/q08-estrutura-pacote.png)
+
+*Subgrafo do pacote `domain`, em visualização de grafo sem legendas nos nós.*
+
 ## Troubleshooting
 
-> **Situação atual:** todos os problemas abaixo estão identificados como **problema potencial**. Eles são riscos conhecidos desta carga, mas nenhum foi observado ainda, porque o projeto não foi validado em uma instância Neo4j real. Os problemas efetivamente ocorridos na validação serão registrados como **observado**, no mesmo formato, na tarefa 10.1.
+> **Situação atual:** todos os problemas abaixo estão identificados como **problema potencial**. Eles são riscos conhecidos desta carga. Na validação de 2026-11-18 os scripts rodaram com 0 erros, então nenhum deles foi observado.
 
 ### 1. CSV não encontrado pelo `LOAD CSV` (problema potencial)
 
@@ -234,10 +349,21 @@ As consultas ficam em `cypher/03_queries.cypher` e usam estes parâmetros padrã
 
 ## Validação
 
-> **Pendente, a preencher pelo Autor na tarefa 10.1.** Os campos abaixo ficam em aberto até a validação dos scripts em uma instância Neo4j real. Nenhum valor foi inferido ou estimado.
+> **Nota:** esta validação foi executada pelo agente que montou o projeto. Ela aguarda a confirmação do próprio Autor.
 
 | Campo | Valor |
 |---|---|
-| Versão do Neo4j (MAJOR.MINOR.PATCH) | _pendente: a preencher pelo Autor na tarefa 10.1_ |
-| Edição (Community ou Enterprise) | _pendente: a preencher pelo Autor na tarefa 10.1_ |
-| Data da validação | _pendente: a preencher pelo Autor na tarefa 10.1_ |
+| Versão do Neo4j (MAJOR.MINOR.PATCH) | 5.26.33 |
+| Edição (Community ou Enterprise) | Community |
+| Data da validação | 2026-11-18 |
+| Execução dos scripts | 0 erros |
+| Contagens de nós e relacionamentos | Iguais às tabelas de [Contagens esperadas](#contagens-esperadas-após-a-carga) |
+| Consultas Q01 a Q08 | Resultados iguais aos esperados |
+
+---
+
+<div align="center">
+
+Licença [MIT](LICENSE)
+
+</div>

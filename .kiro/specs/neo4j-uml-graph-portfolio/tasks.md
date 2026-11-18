@@ -184,7 +184,7 @@ Decisões do plano:
 - [~] 6. Checkpoint - Scripts e consultas
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 7. Criar a documentação e os testes de conteúdo
+- [x] 7. Criar a documentação e os testes de conteúdo
   - [x] 7.1 Criar `docs/modelo-grafo.md`
     - Em português. Tabela de nós (labels base `Package`, `Classifier`, `Attribute`, `Method` e derivados `Class`, `Interface`, `Enum`) com propriedades, tipo de dado e identificador único
     - Tabela de relacionamentos (tipo, origem, destino, direção, propriedades ou "sem propriedades")

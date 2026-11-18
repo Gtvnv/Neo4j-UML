@@ -127,4 +127,28 @@ def test_real_readme_image_links_resolve():
     """README real: hoje sem imagens (vacuo); qualquer link futuro deve resolver."""
     text = (REPO / "README.md").read_text(encoding="utf-8")
     for link in extract_image_links(text):
-        assert is_valid_image_link(link, REPO), f"link de imagem invalido: {link}"
+        assert is_allowed_readme_image(link, REPO), f"link de imagem invalido: {link}"
+
+
+SHIELDS_PREFIX = "https://img.shields.io/"
+
+
+def is_allowed_readme_image(link: str, root: Path) -> bool:
+    """Badge do shields.io (https, host exato) ou imagem local valida."""
+    if link.startswith(SHIELDS_PREFIX) and len(link) > len(SHIELDS_PREFIX):
+        return True
+    return is_valid_image_link(link, root)
+
+
+def test_readme_allows_only_shields_externally():
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        assert is_allowed_readme_image("https://img.shields.io/badge/a-b-blue", root)
+        for bad in (
+            "https://example.com/badge.svg",
+            "http://img.shields.io/badge/a-b-blue",
+            "https://img.shields.io.evil.com/x.svg",
+            "https://img.shields.io@evil.com/x.svg",
+            "https://img.shields.io/",
+        ):
+            assert not is_allowed_readme_image(bad, root), bad
