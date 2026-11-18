@@ -1,0 +1,749 @@
+{
+  "pbtResults": {
+    "4.5 Escrever o teste de propriedade da varredura de scripts": {
+      "status": "passed",
+      "lastRunTimestamp": 1795037428836
+    }
+  },
+  "executionHistory": {
+    "1.1 Criar `.gitignore` e `LICENSE` na raiz": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037121723
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037154237
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037236250
+      }
+    ],
+    "1.2 Criar o esqueleto da suíte de testes": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037123157
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037154875
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037236665
+      }
+    ],
+    "2.1 Criar `data/classifiers.csv`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037124024
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037241567
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037306697
+      }
+    ],
+    "2.2 Criar `data/relationships.csv`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037124367
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037313560
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037451953
+      }
+    ],
+    "2.3 Criar `data/attributes.csv`, `data/methods.csv` e `data/calls.csv`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037125027
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037313753
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037452346
+      }
+    ],
+    "2.4 Implementar o modelo de dataset e o validador": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037125313
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037242243
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037307230
+      }
+    ],
+    "2.5 Escrever o teste de propriedade do validador de dataset": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037125753
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037314269
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037453057
+      }
+    ],
+    "2.6 Escrever testes de exemplo do dataset real": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037126154
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037499724
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037879089
+      }
+    ],
+    "3. Checkpoint - Dataset": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037126366
+      }
+    ],
+    "4.1 Criar `cypher/01_constraints.cypher`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037126524
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037155561
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037237588
+      }
+    ],
+    "4.2 Criar `cypher/02_load.cypher`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037127086
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037242767
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037307808
+      }
+    ],
+    "4.3 Criar `cypher/04_validate.cypher` e `cypher/99_reset.cypher`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037127573
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037156142
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037238495
+      }
+    ],
+    "4.4 Implementar o fixture de Neo4j e o oráculo de contagens": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037127957
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037314937
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037454204
+      }
+    ],
+    "4.5 Escrever o teste de propriedade da varredura de scripts": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037128252
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037315502
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037454493
+      }
+    ],
+    "4.6 Escrever o teste de propriedade das contagens após a carga": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037128422
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037498542
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037879558
+      }
+    ],
+    "4.7 Escrever o teste de propriedade da conversão de tipos": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037129020
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037502314
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037880255
+      },
+      {
+        "executionId": "d0e685ce-3f98-4525-9fe6-e7dc926e3f13",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795043325789
+      },
+      {
+        "executionId": "d0e685ce-3f98-4525-9fe6-e7dc926e3f13",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795044192670
+      }
+    ],
+    "4.8 Escrever o teste de propriedade de idempotência da carga": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037129438
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037503078
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037880805
+      }
+    ],
+    "4.9 Escrever o teste de propriedade de retomada da carga": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037130071
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037504349
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037881601
+      }
+    ],
+    "4.10 Escrever o teste de propriedade de reset e recarga": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037130353
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037886565
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038314031
+      }
+    ],
+    "4.11 Escrever testes de exemplo dos scripts de constraints e carga": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037131425
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037887142
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038314366
+      }
+    ],
+    "5.1 Criar `cypher/03_queries.cypher`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037131611
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037243479
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037308515
+      }
+    ],
+    "5.2 Implementar os oráculos das consultas e o extrator de consultas": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037132479
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037888181
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038314895
+      }
+    ],
+    "5.3 Escrever o teste de propriedade de alcançabilidade": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037132887
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038322318
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040484670
+      }
+    ],
+    "5.4 Escrever o teste de propriedade de detecção de ciclos": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037133145
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038322789
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040485765
+      }
+    ],
+    "5.5 Escrever o teste de propriedade de violação de camadas": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037134471
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038323159
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040486336
+      }
+    ],
+    "5.6 Escrever o teste de propriedade de implementadores concretos": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037134772
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038323547
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040487073
+      }
+    ],
+    "5.7 Escrever o teste de propriedade de acoplamento": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037135066
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038324060
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040487862
+      }
+    ],
+    "5.8 Escrever testes de exemplo das consultas no dataset real": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037135324
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040493588
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040815388
+      }
+    ],
+    "6. Checkpoint - Scripts e consultas": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037136491
+      }
+    ],
+    "7.1 Criar `docs/modelo-grafo.md`": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037136902
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037458840
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037492987
+      }
+    ],
+    "7.2 Escrever o teste de propriedade do esquema documentado": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037137469
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040493964
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040815689
+      }
+    ],
+    "7.3 Criar o `README.md` - apresentação, contexto, justificativa e domínio": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037138846
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037888471
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038315891
+      }
+    ],
+    "7.4 Ampliar o `README.md` - execução, contagens e perguntas de negócio": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037139122
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040494618
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040816292
+      }
+    ],
+    "7.5 Ampliar o `README.md` - troubleshooting e espaço de validação": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037139566
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040820493
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040872929
+      }
+    ],
+    "7.6 Escrever o teste de propriedade de nomes e padrões": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037140658
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040495363
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040817240
+      }
+    ],
+    "7.7 Escrever o teste de propriedade do termo proibido": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037141001
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040879975
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795041108004
+      }
+    ],
+    "7.8 Escrever o teste de propriedade dos links de imagem do README": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037142795
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040880421
+      }
+    ],
+    "7.9 Escrever testes de exemplo do repositório e do README": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037143227
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040880561
+      },
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795041111280
+      }
+    ],
+    "8. Checkpoint - Documentação e testes puros": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037143651
+      }
+    ],
+    "9.1 **[AÇÃO DO USUÁRIO]** Executar a sequência completa em uma instância real do Neo4j": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037143953
+      },
+      {
+        "executionId": "c90fb3a0-1b56-4f6a-8a3b-0d2be4307e9c",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795041213033
+      },
+      {
+        "executionId": "1c400435-f924-41e3-b9db-49275c7480a5",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795043128360
+      }
+    ],
+    "9.2 **[AÇÃO DO USUÁRIO]** Registrar os problemas realmente observados": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037144493
+      }
+    ],
+    "9.3 **[AÇÃO DO USUÁRIO]** Gerar a imagem de esquema do banco": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037145252
+      }
+    ],
+    "9.4 **[AÇÃO DO USUÁRIO]** Desenhar o esquema no Arrows.app": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037145977
+      }
+    ],
+    "9.5 **[AÇÃO DO USUÁRIO]** Capturar as evidências visuais das oito perguntas": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037146260
+      }
+    ],
+    "9.6 **[AÇÃO DO USUÁRIO]** Revisar manualmente imagens e textos": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037146534
+      }
+    ],
+    "10.1 Atualizar README e `modelo-grafo.md` com os dados fornecidos pelo Autor": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037146789
+      }
+    ],
+    "10.2 Escrever e executar os testes das imagens e dos links reais": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037147372
+      }
+    ],
+    "11. Checkpoint final - Ensure all tests pass, ask the user if questions arise.": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037147998
+      }
+    ],
+    "12.1 **[AÇÃO DO USUÁRIO]** Publicar conforme o tipo de repositório": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037148364
+      }
+    ],
+    "2. Criar o dataset e o validador de dataset": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795037879847
+      }
+    ],
+    "4. Criar os scripts Cypher de constraints, carga, validação e reset": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795038314531
+      }
+    ],
+    "5. Criar as consultas de negócio": [
+      {
+        "executionId": "23004dce-8170-4678-8e53-43683c2c18e7",
+        "chatSessionId": "sess_1fb27bf2-819e-4d83-8208-6fb205069fae",
+        "timestamp": 1795040815908
+      }
+    ]
+  }
+}

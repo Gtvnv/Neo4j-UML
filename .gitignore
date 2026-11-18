@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+.vs/
+
+# Neo4j runtime
+neo4j/data/
+neo4j/logs/
+neo4j/import/
+
+# Python
+__pycache__/
+.pytest_cache/
+.hypothesis/
+.venv/
+
+# Secrets
+.env

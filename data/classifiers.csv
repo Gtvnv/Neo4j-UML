@@ -1,0 +1,17 @@
+id,name,kind,isAbstract,package
+Customer,Customer,class,false,domain
+Order,Order,class,false,domain
+OrderItem,OrderItem,class,false,domain
+Product,Product,class,false,domain
+Payment,Payment,class,true,domain
+CreditCardPayment,CreditCardPayment,class,false,domain
+PaymentStatus,PaymentStatus,enum,false,domain
+OrderService,OrderService,class,false,service
+PaymentService,PaymentService,class,false,service
+NotificationService,NotificationService,class,false,service
+PaymentGateway,PaymentGateway,interface,false,service
+OrderRepository,OrderRepository,interface,false,repository
+CustomerRepository,CustomerRepository,interface,false,repository
+StripeGateway,StripeGateway,class,false,infra
+JpaOrderRepository,JpaOrderRepository,class,false,infra
+SmtpEmailSender,SmtpEmailSender,class,false,infra

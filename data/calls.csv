@@ -1,0 +1,9 @@
+callerId,calleeId,sequence
+OrderService.placeOrder,Order.calculateTotal,1
+OrderService.placeOrder,PaymentService.charge,2
+OrderService.placeOrder,OrderRepository.save,3
+PaymentService.charge,StripeGateway.authorize,1
+PaymentService.charge,NotificationService.sendReceipt,2
+NotificationService.sendReceipt,SmtpEmailSender.send,1
+Order.calculateTotal,OrderItem.subtotal,1
+OrderRepository.save,JpaOrderRepository.save,1
